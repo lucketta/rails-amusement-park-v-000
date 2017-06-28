@@ -1,0 +1,26 @@
+<h1>Log In</h1>
+
+<%= form_tag signin_path do %>
+
+  <label>Name</label>
+  <input type="text" name="user[name]">
+
+  <label>Password</label>
+  <input type="text" name="user[password]">
+
+  <label>Height</label>
+  <input type="text" name="user[height]">
+
+  <label>Happiness</label>
+  <input type="text" name="user[happiness]">
+
+  <label>nausea</label>
+  <input type="text" name="user[nausea]">
+
+  <label>tickets</label>
+  <input type="text" name="user[tickets]">
+
+
+  <label>Sign In</label>
+  <input type="submit" name="Sign In" value="Sign In">
+<% end %>

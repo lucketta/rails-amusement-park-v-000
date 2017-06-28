@@ -1,0 +1,20 @@
+<%= form_tag attractions_path do %>
+
+  <label>Name</label>
+  <input type="text" name="attraction[name]">
+
+  <label>Min Height</label>
+  <input type="text" name="attraction[min_height]">
+
+  <label>Happiness</label>
+  <input type="text" name="attraction[happiness_rating]">
+
+  <label>nausea</label>
+  <input type="text" name="attraction[nausea_rating]">
+
+  <label>tickets</label>
+  <input type="text" name="attraction[tickets]">
+
+  <label>Create Attraction</label>
+  <input type="submit" name="Create Attraction" value="Create Attraction">
+<% end %>

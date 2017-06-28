@@ -1,0 +1,18 @@
+<div class="">
+
+
+Name: <%=  @attraction.name %>
+Tickets: <%=  @attraction.tickets %>
+happiness_rating: <%=  @attraction.happiness_rating %>
+nausea_rating: <%=  @attraction.nausea_rating %>
+min_height: <%=  @attraction.min_height %>
+
+</div>
+
+<% if @user.admin %>
+  <%= link_to "Edit Attraction", edit_attraction_path(@attraction)%>
+<% else %>
+<p>
+<%= button_to "Go on this ride", user_path(@user), method: :get, params: {on_ride: true, attraction_id: @attraction.id} %>
+</p>
+  <% end %>

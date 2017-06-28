@@ -1,0 +1,41 @@
+<%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+<%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
+<%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
+
+
+  <strong> ADMIN </strong>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Nausea:</strong>
+  <%= @user.nausea %>
+</p>
+
+<p>
+  <strong>Happiness:</strong>
+  <%= @user.happiness %>
+</p>
+
+<p>
+  <strong>Tickets:</strong>
+  <%= @user.tickets %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @user.height %>
+
+  <strong>Mood:</strong>
+  <%= @user.mood %>
+</p>
+
+<%= link_to 'See attractions', attractions_path%>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+<%= link_to 'Log Out', logout_path, method: "post" %>

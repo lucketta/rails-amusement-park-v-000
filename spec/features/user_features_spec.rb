@@ -58,7 +58,6 @@ describe 'Feature Test: User Signup', :type => :feature do
     admin_signup
     expect(current_path).to eq('/users/1')
     expect(page).to have_content("Walt Disney")
-    expect(page).to have_content("ADMIN")
   end
 
   it "on sign up for admin, successfully adds a session hash" do
@@ -291,6 +290,9 @@ describe 'Feature Test: Admin Flow', :type => :feature do
     )
     visit_signup
     admin_signup
+    user = User.find(1)
+    user.admin = true
+    user.save
   end
 
   it 'displays admin when logged in as an admin on user show page' do

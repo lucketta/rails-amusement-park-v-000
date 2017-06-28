@@ -1,0 +1,28 @@
+<h1>Sign Up Here</h1>
+
+<%= form_tag users_path do %>
+
+  <label>Name</label>
+  <input type="text" name="user[name]">
+
+  <label>Password</label>
+  <input type="text" name="user[password]">
+
+  <label>Height</label>
+  <input type="text" name="user[height]">
+
+  <label>Happiness</label>
+  <input type="text" name="user[happiness]">
+
+  <label>nausea</label>
+  <input type="text" name="user[nausea]">
+
+  <label>tickets</label>
+  <input type="text" name="user[tickets]">
+
+  <label>Admin?</label>
+  <%= check_box_tag "admin",1, false, options: {class: 'user_admin'} %>
+
+  <label>Create User</label>
+  <input type="submit" name="Create User" value="Create User">
+<% end %>
